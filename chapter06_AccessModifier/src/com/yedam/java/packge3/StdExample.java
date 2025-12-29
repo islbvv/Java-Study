@@ -53,6 +53,27 @@ public class StdExample {
 			} else if (select == 4) {
 				System.out.println("[ 4.분석 ]");
 
+				Std korMax = scoreList[0];
+				Std engMax = scoreList[0];
+				Std mathMax = scoreList[0];
+
+				for (int i = 1; i < scoreList.length; i++) {
+					if (scoreList[i].getKor() > korMax.getKor()) {
+						korMax = scoreList[i];
+					}
+
+					if (scoreList[i].getEng() > engMax.getEng()) {
+						engMax = scoreList[i];
+					}
+
+					if (scoreList[i].getMath() > mathMax.getMath()) {
+						mathMax = scoreList[i];
+					}
+				}
+				System.out.println("국어: " + korMax.getName() + " / " + korMax.getKor());
+				System.out.println("영어: " + engMax.getName() + " / " + engMax.getEng());
+				System.out.println("수학: " + mathMax.getName() + " / " + mathMax.getMath());
+
 			} else if (select == 5) {
 				System.out.println("[ 5.종료 ]");
 				System.out.print("");
