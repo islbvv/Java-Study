@@ -24,7 +24,7 @@ public class CastingExample {
 		parent.method2();
 		System.out.println();
 
-		// -> 자식클래스의 고유멤버를 사용해야 되는 경우
+		// -> 자식클래스의 고유멤버를 사용해야 되는 경우0
 		if (parent instanceof Child) {
 			child = (Child) parent;
 			child.method3();
